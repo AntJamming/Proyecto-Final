@@ -1,0 +1,11 @@
+SELECT
+ stu.name,
+ stu.age,
+ com.forum_id,
+ com.comment
+FROM
+ students stu
+JOIN comments com
+ ON stu.forum_username = com.forum_username
+WHERE stu.city = “Ensenada”
+ORDER BY stu.name ASC;
